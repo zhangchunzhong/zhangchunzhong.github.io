@@ -168,8 +168,6 @@
                         <h1><a class="header" href="#chapter-1-backup-architectures" id="chapter-1-backup-architectures">Chapter 1 Backup architectures</a></h1>
 <h2><a class="header" href="#backup-software-requirement" id="backup-software-requirement">Backup software requirement</a></h2>
 <ul>
-<li>summary (best-to-have)
-<ul>
 <li>multiple storage support
 <ul>
 <li>file system</li>
@@ -177,8 +175,6 @@
 <li>ftp </li>
 <li>http</li>
 <li>ssh</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>multiple agents support
@@ -429,21 +425,6 @@ preserve restore --keyfile keyfile --backend file --backend-path /path/to/my/bac
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload();
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

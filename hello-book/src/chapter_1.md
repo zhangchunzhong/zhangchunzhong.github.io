@@ -1,13 +1,12 @@
 # Chapter 1 Backup architectures
 
 ## Backup software requirement
-- summary (best-to-have)
-    - multiple storage support
-        - file system
-        - s3 storage
-        - ftp 
-        - http
-        - ssh
+- multiple storage support
+    - file system
+    - s3 storage
+    - ftp 
+    - http
+    - ssh
 - multiple agents support
     - oracle
     - mysql
@@ -20,7 +19,6 @@
 - ease to use / mgmt UI/CLI
 - punch / delete / expiration support
 - multiple devices/systems/agents support
-
 
 ## Technical points
 - repo / access
