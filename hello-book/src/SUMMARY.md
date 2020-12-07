@@ -4,5 +4,3 @@
 - [Chapter 2](./chapter_2.md)
 - [Chapter 3](./chapter_3.md)
 - [Chapter ref](./chapter_ref.md)
-
-
