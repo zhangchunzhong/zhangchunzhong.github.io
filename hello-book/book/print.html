@@ -1,0 +1,470 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>hello book</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="chapter_1.html"><strong aria-hidden="true">1.</strong> Chapter 1</a></li><li class="chapter-item expanded "><a href="chapter_2.html"><strong aria-hidden="true">2.</strong> Chapter 2</a></li><li class="chapter-item expanded "><a href="chapter_3.html"><strong aria-hidden="true">3.</strong> Chapter 3</a></li><li class="chapter-item expanded "><a href="chapter_ref.html"><strong aria-hidden="true">4.</strong> Chapter ref</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">hello book</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#chapter-1-backup-architectures" id="chapter-1-backup-architectures">Chapter 1 Backup architectures</a></h1>
+<h2><a class="header" href="#backup-software-requirement" id="backup-software-requirement">Backup software requirement</a></h2>
+<ul>
+<li>summary (best-to-have)
+<ul>
+<li>multiple storage support
+<ul>
+<li>file system</li>
+<li>s3 storage</li>
+<li>ftp </li>
+<li>http</li>
+<li>ssh</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>multiple agents support
+<ul>
+<li>oracle</li>
+<li>mysql</li>
+</ul>
+</li>
+<li>recovery from data corruption (data integration/safe)</li>
+<li>snapshot support</li>
+<li>concurrent client access</li>
+<li>encryption support (derived key)</li>
+<li>space efficiency (zip/dedupe)</li>
+<li>speed efficiency (diff data transfer only)</li>
+<li>ease to use / mgmt UI/CLI</li>
+<li>punch / delete / expiration support</li>
+<li>multiple devices/systems/agents support</li>
+</ul>
+<h2><a class="header" href="#technical-points" id="technical-points">Technical points</a></h2>
+<ul>
+<li>repo / access
+<ul>
+<li>local</li>
+<li>s3 cloud</li>
+<li>ftp</li>
+<li>http</li>
+<li>ssh</li>
+</ul>
+</li>
+<li>file container
+<ul>
+<li>encryption</li>
+<li>compression</li>
+<li>extra meta info
+<ul>
+<li>file level</li>
+<li>backup level</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>file chunking</li>
+<li>index support</li>
+<li>flexible data layout
+<ul>
+<li>erasure code support</li>
+</ul>
+</li>
+<li>encryption
+<ul>
+<li>symmetrical</li>
+<li>key derived</li>
+</ul>
+</li>
+<li>data recovery from corruption
+<ul>
+<li>erasure code support</li>
+</ul>
+</li>
+<li>punch support
+<ul>
+<li>data compaction</li>
+<li>lock free / concurrent client access</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#the-big-questions" id="the-big-questions">The big questions</a></h2>
+<ul>
+<li>big issue #1: what backup is for ?
+<ul>
+<li>prevent data lose</li>
+<li>view history data</li>
+<li>any others ?</li>
+</ul>
+</li>
+<li>big issue #2: closed system
+<ul>
+<li>software NOT interop</li>
+<li>data format is vendor locked</li>
+<li>file backup is common, BUT
+<ul>
+<li>Each database has their own backup method</li>
+<li>so it is too software/agent related, case by case?</li>
+<li>not easy to extend</li>
+<li>not too much value, nichole market</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>big issue #3: what is the requirement ?
+<ul>
+<li>mobile support (from produce view)
+<ul>
+<li>but phone vendor has solution
+<ul>
+<li>Narrow down the requirement of backup software</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1><a class="header" href="#chapter-2-agents" id="chapter-2-agents">chapter 2 agents</a></h1>
+<h1><a class="header" href="#chapter-2-file-formatlayouts" id="chapter-2-file-formatlayouts">chapter 2 file format/layouts</a></h1>
+<h2><a class="header" href="#git-pack-file" id="git-pack-file">git pack file</a></h2>
+<h2><a class="header" href="#backup-software-in-github" id="backup-software-in-github">backup software in github</a></h2>
+<h3><a class="header" href="#httpsgithubcomresticrestic" id="httpsgithubcomresticrestic">https://github.com/restic/restic</a></h3>
+<ul>
+<li>in golang</li>
+<li>https://restic.readthedocs.io/en/latest/100_references.html#design
+<ul>
+<li>git like repo</li>
+<li>CDC, dedupe, encryption</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#httpsgithubcomborgbackupborg" id="httpsgithubcomborgbackupborg">https://github.com/borgbackup/borg</a></h3>
+<ul>
+<li>in c and python</li>
+<li>https://borgbackup.readthedocs.io/en/stable/internals.html
+<ul>
+<li>architecture
+<ul>
+<li><img src="https://borgbackup.readthedocs.io/en/stable/_images/structure.png" alt="architecture" /></li>
+</ul>
+</li>
+<li>repo 
+<ul>
+<li>https://borgbackup.readthedocs.io/en/stable/internals/data-structures.html#repository</li>
+<li><img src="https://borgbackup.readthedocs.io/en/stable/_images/object-graph.png" alt="object-graph" /></li>
+</ul>
+</li>
+<li>compaction
+<ul>
+<li>todo</li>
+</ul>
+</li>
+<li>Encryption
+<ul>
+<li><img src="https://borgbackup.readthedocs.io/en/stable/_images/encryption.png" alt="Encryption" /></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#httpsgithubcombupbup" id="httpsgithubcombupbup">https://github.com/bup/bup</a></h3>
+<ul>
+<li>python and c</li>
+<li>It uses a rolling checksum algorithm (similar to rsync) to split large files into chunks.</li>
+<li>Bup can use &quot;par2&quot; redundancy to recover corrupted backups even if your disk has undetected bad sectors.
+<ul>
+<li>https://blog.georgovassilis.com/2018/12/12/parchive-protecting-backups-against-data-corruption/</li>
+<li>I think par2 is out (?), so have a look on erasure code.
+<ul>
+<li>https://github.com/darrenldl/reed-solomon-erasure</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>bup stores its data in a git-formatted repository. 
+<ul>
+<li>https://shafiul.github.io/gitbook/7_the_packfile.html</li>
+<li>git packs come in two parts: the pack itself (.pack) and the index (.idx).</li>
+<li>when generating a remote backup, we don't have to have a copy of the packfiles from the remote server
+<ul>
+<li>the local end just downloads a copy of the server's index files,</li>
+<li>and compares objects against those when generating the new pack, which it sends directly to the server.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#httpsgithubcomduplicatiduplicati" id="httpsgithubcomduplicatiduplicati">https://github.com/duplicati/duplicati</a></h3>
+<ul>
+<li>c##</li>
+<li>security and dedupe</li>
+</ul>
+<h3><a class="header" href="#httpsgithubcomgilbertchenduplicacy" id="httpsgithubcomgilbertchenduplicacy">https://github.com/gilbertchen/duplicacy</a></h3>
+<ul>
+<li>in golang</li>
+<li>A lock-free deduplication cloud backup tool
+<ul>
+<li>cloud backup tool</li>
+<li>chunk index file instead of chunk database</li>
+<li>super fast</li>
+<li>lock-free approach</li>
+</ul>
+</li>
+</ul>
+<table><thead><tr><th>software</th><th align="center">cdc</th><th align="right">chunk index</th><th align="right">cloud support</th><th align="right">concurrent clients access</th></tr></thead><tbody>
+<tr><td>duplicity</td><td align="center">rsync</td><td align="right">none</td><td align="right">none</td><td align="right"></td></tr>
+<tr><td>bup</td><td align="center">librsync</td><td align="right">none</td><td align="right">none</td><td align="right"></td></tr>
+<tr><td>Duplicati</td><td align="center">fix-sized chunk</td><td align="right">none</td><td align="right">yes</td><td align="right">yes, but to different store</td></tr>
+<tr><td>Attic</td><td align="center">CDC</td><td align="right">indexing database</td><td align="right">none</td><td align="right">exclusive locking, hard to extend</td></tr>
+<tr><td>restic</td><td align="center">CDC</td><td align="right">git pack</td><td align="right">yes</td><td align="right">exclusive locking, hard to extend</td></tr>
+</tbody></table>
+<h3><a class="header" href="#httpsgithubcomdpcrdedup" id="httpsgithubcomdpcrdedup">https://github.com/dpc/rdedup</a></h3>
+<ul>
+<li>in rust</li>
+<li>https://github.com/dpc/rdedup/wiki/My-original-use-case-%28old-README.md%29
+<ul>
+<li>provide encryption, but only symmetrical</li>
+<li>public key cryptography, secure passpharse is required only when restoring data, 
+<ul>
+<li>while adding and deduplicating new data does not.</li>
+</ul>
+</li>
+<li>libsodium's sealed boxes are used for encryption/decryption</li>
+<li>private key is encrypted using libsodium crypto secretbox using random nonce, and key derived from passphrase using password hashing and random salt</li>
+</ul>
+</li>
+</ul>
+<h3><a class="header" href="#httpsgithubcomjborgattic" id="httpsgithubcomjborgattic">https://github.com/jborg/attic</a></h3>
+<ul>
+<li>in python</li>
+<li>https://github.com/sourcefrog/conserve/wiki/Compared-to-others</li>
+</ul>
+<h3><a class="header" href="#httpsgithubcomsourcefrogconserve" id="httpsgithubcomsourcefrogconserve">https://github.com/sourcefrog/conserve</a></h3>
+<h3><a class="header" href="#httpsgithubcomfpgaminerpreserve" id="httpsgithubcomfpgaminerpreserve">https://github.com/fpgaminer/preserve</a></h3>
+<pre><code>- https://github.com/fpgaminer/preserve
+</code></pre>
+<pre><code>preserve keygen --keyfile keyfile
+preserve create --keyfile keyfile --backend file --backend-path /path/to/my/backups/ my-backup-`date +%Y-%m-%d_%H-%M-%S` /home/me/
+preserve list --keyfile keyfile --backend file --backend-path /path/to/my/backups/
+preserve restore --keyfile keyfile --backend file --backend-path /path/to/my/backups/ name-of-backup-to-restore /path/to/restore/it/to/
+</code></pre>
+<h3><a class="header" href="#httpsgithubcomjendakolrbackup" id="httpsgithubcomjendakolrbackup">https://github.com/jendakol/rbackup</a></h3>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
